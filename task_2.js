@@ -1,5 +1,6 @@
-let user_number = +prompt("Task 2.1\n\nEnter number from 0 to 9:");
 let symbol = null;
+let user_number = +prompt("Task 2.1\n\nEnter number from 0 to 9:");
+
 switch(user_number)
 {
     case 0:
