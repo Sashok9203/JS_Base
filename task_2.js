@@ -38,14 +38,15 @@ switch(user_number)
 }
 if( symbol != null) alert(`Task 2.1\n\nOn the key with the number "${user_number}" there is a symbol "${symbol}"`);
 
-let user_year = +prompt("Task 2.2\n\nEnter year:");
-alert(`Task 2.2\n\n${user_year} ${user_year % 400 == 0 || (user_year%4 == 0 && user_year % 100 != 0)? "is" : " is not" } a leap year`);
+let year = +prompt("Task 2.2\n\nEnter year:");
+if(Number.isNaN(year)) alert(`Task 2.2\n\nInvalid year`);
+else alert(`Task 2.2\n\n${year} ${year % 400 === 0 || (year%4 === 0 && year % 100 !== 0)? "is" : " is not" } a leap year`);
 
-let year = +prompt("Task 2.3\n\nEnter year:");
-let month = +prompt("Task 2.3\n\nEnter month:");
+year = +prompt("Task 2.3\n\nEnter year:");
+let month = +prompt("Task 2.3\n\nEnter month:") - 1;
 let day = +prompt("Task 2.3\n\nEnter day:");
 let date = new Date(year,month,day);
 date.setDate(date.getDate() + 1);
-alert(`Task 2.3\n\nNext day ${date.getDate()}/ ${date.getMonth()}/ ${date.getFullYear()}`);
+alert(`Task 2.3\n\nNext day ${date.toDateString()}`);
 
 

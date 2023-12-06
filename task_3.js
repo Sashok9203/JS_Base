@@ -1,19 +1,19 @@
 let start = +prompt("Task 3.1\n\nEnter start number:");
 let end = +prompt("Task 3.1\n\nEnter end number:");
-let sum = null;
+let sum = 0;
 for (let index = start; index <= end; index++) {
     sum += index;
 }
 alert(`Task 3.1\n\nThe sum of the digits in the range from ${start} to ${end} is equal ${sum}`);
 
 let number = +prompt("Task 3.2\n\nEnter number:");
-alert(`Task 3.2\n\nCount of digits : ${String(number).length}`);
+if(Number.isNaN(number))alert(`Task 3.2\n\nInvalid number`);
+else alert(`Task 3.2\n\nCount of digits : ${String(number).length}`);
 
 let arr = new Array();
 for (let index = 1; index <= 10; index++) {
     let number =  +prompt(`Task 3.3\n\nEnter ${index}-th number:`);
     arr.push(number);
-    
 }
 let neg = 0;
 let pos = 0;
